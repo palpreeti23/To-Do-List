@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(rgb(160, 219, 242), rgb(45, 65, 79));
+
+}
+
+.to-do-list {
+    height: fit-content;
+    width: 30rem;
+    background-color: white;
+    padding: .5rem ;
+    position: absolute;
+    border-radius: .5rem;
+    top: 30%;
+    left: 30%;
+
+}
+
+.to-do-list img{
+    height: 1.2rem;
+    width: 1.7rem;
+   padding-left: .3rem;
+}
+
+.second-container{
+    display: flex;
+    position: relative;
+}
+#input{
+
+    width: 100%;
+    border: none;
+    background-color: rgb(218, 220, 221);
+    padding: .6rem;
+    border-radius: 1rem;
+    margin: 1rem 0 1rem;
+    position: relative;
+
+}
+
+#btn{
+    width: 15%;
+    border: none;
+    font-size: medium;
+    padding: .5rem;
+    border-radius: 1rem;
+    margin: 1rem 0 1rem;
+    background-color: rgb(207, 20, 26);
+    position: absolute;
+    right: 0;
+}
+
+.list-container li{
+
+    list-style: none;
+    margin: .5rem;
+}
+
+.list-container li ::after{
+    height: 5rem;
+    width: 5rem;
+    border-radius: 50%;
+    border: .2rem solid black;
+}
