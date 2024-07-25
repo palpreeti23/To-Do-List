@@ -9,12 +9,22 @@ function addList(){
         alert("please type something fifst!!!!")
     }
     else{
-       let LI = document.createElement('li');
-        LI.innerHTML = inputBtn.value;
-        listContainer.appendChild(LI)
+       let li = document.createElement('li');
+        li.innerHTML = inputBtn.value;
+        listContainer.appendChild(li)
         let span = document.createElement('span')
         span.innerHTML = "\u00d7"
-        listContainer.appendChild(span)
+        li.appendChild(span)
     }
     inputBtn.value = '';
 }
+
+listContainer.addEventListener("click", function(e){
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggal("checked");
+    }
+    else if(e.target.tagName === "SPAN"){
+
+        e.target.parentElement.remove();
+    }
+    });

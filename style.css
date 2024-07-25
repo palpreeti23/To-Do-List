@@ -92,23 +92,17 @@ ul li.checked::before{
     background-image: url('./image/checked-bcgi.png');
 }
 
-.list-container{
-    display: flex;
-
-}
-
 .list-container span{
 
     position: absolute;
-    margin-top: .4rem;
     right: 1rem;
     text-align: center;
-    height: 2rem;
-    width: 2rem;
+    height: 1.7rem;
+    width: 1.6rem;
     border-radius: 50%;
-    padding-top: .2rem;
     font-size: 1.5rem;
 }
 .list-container span:hover{
     background-color: #e0dede;
 }
+
