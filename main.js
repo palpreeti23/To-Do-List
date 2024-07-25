@@ -1,6 +1,6 @@
-const inputBtn =document.querySelector("#input");
+const inputBtn =document.querySelector(".input");
 const listContainer = document.querySelector(".list-container");
-const addBtn = document.querySelector("#btn");
+const addBtn = document.querySelector(".btn");
 
 addBtn.addEventListener('click', addList);
 
@@ -17,14 +17,27 @@ function addList(){
         li.appendChild(span)
     }
     inputBtn.value = '';
+    saveData();
 }
 
 listContainer.addEventListener("click", function(e){
     if(e.target.tagName === "LI"){
-        e.target.classList.toggal("checked");
+        // e.target.classList.toggal("checked");
+        e.target.classList.toggle("checked")
+        saveData();
     }
     else if(e.target.tagName === "SPAN"){
-
         e.target.parentElement.remove();
+        saveData();
     }
-    });
+    }, false);
+
+    function saveData(){
+        localStorage.setItem('data', listContainer.innerHTML)
+    }
+
+    function showData(){
+        listContainer.innerHTML = localStorage.getItem('data')
+    }
+
+    showData();
